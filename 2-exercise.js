@@ -15,12 +15,7 @@ for(const element of bigArray) {
     if (Object.getOwnPropertyNames(hash1).includes(typeof element)) {
         hash1[typeof element] += 1;
     }   else    {
-        Object.defineProperty(hash1, typeof element, {
-            enumerable: true,
-            writable: true,
-            value: 1,
-        })
-        
+        hash1[typeof element] = 1;
     }
 }
 console.dir(hash1)
